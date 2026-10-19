@@ -2,3 +2,6 @@ __pycache__/
 *.pyc
 demo.db
 .DS_Store
+*.docx
+*.docs
+~$*
