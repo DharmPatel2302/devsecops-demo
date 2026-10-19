@@ -29,8 +29,8 @@ def home():
 def get_user():
     name = request.args.get("name", "")
     conn = get_db()
-    query = "SELECT id, username, role FROM users WHERE username = ?"`n    cursor = conn.execute(query, (name,)) #  # nosec - intentional for demo
-    cursor = conn.execute(query)
+    query = "SELECT id, username, role FROM users WHERE username = ?"
+    cursor = conn.execute(query, (name,))
     rows = cursor.fetchall()
     return {"results": rows}
 

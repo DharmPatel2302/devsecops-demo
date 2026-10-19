@@ -5,3 +5,5 @@ demo.db
 *.docx
 *.docs
 ~$*
+command.md
+intro.md
