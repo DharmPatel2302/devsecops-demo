@@ -7,3 +7,5 @@ demo.db
 ~$*
 command.md
 intro.md
+generate_docx.py
+extracted_images/
