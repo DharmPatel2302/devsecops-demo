@@ -5,7 +5,8 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 COPY app.py .
 
-# INTENTIONAL: no USER instruction -> container runs as root.
-# Hadolint (DL3002) will flag this, and Kyverno will block it at deploy time.
+RUN adduser --disabled-password --gecos "" appuser
+USER appuser
+
 EXPOSE 5000
 CMD ["python", "app.py"]
